@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+}
+
+.wrapper {
+  background-color: #0f1f3f;
+  color: white;
+  width: 250px;
+  transition: width 0.3s ease;
+  padding: 16px;
+  min-height: 100vh;
+
+  &.hide {
+    width: 60px;
+
+    .title p {
+      display: none;
+    }
+
+    .menuList {
+      display: none;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
+
+  .icon {
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &:hover {
+    background-color: #1e2a4b;
+  }
+
+  &.active {
+    background-color: white;
+    color: #0f1f3f;
+    font-weight: 600;
+  }
+}
+
+.content {
+  flex: 1;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgb(179, 179, 179);
+    h3 {
+      font-size: 20px;
+    }
+    .manager {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p {
+        color: #000;
+      }
+      img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+  > div {
+    flex: 1;
+    overflow: auto;
+    padding: 15px;
+    max-height: calc(100vh - 70px); // trừ chiều cao header nếu cần
+  }
+}

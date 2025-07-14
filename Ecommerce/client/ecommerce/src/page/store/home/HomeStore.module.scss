@@ -1,0 +1,64 @@
+.revenue-container {
+  padding: 20px;
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  .card {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    p {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    &.blue {
+      background-color: #007bff;
+    }
+
+    &.green {
+      background-color: #28a745;
+    }
+
+    &.orange {
+      background-color: #fd7e14;
+    }
+
+    &.red {
+      background-color: #dc3545;
+    }
+  }
+}
+
+.charts {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  .chart-box {
+    flex: 1;
+    min-width: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+}

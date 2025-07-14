@@ -1,0 +1,152 @@
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.4s ease-in-out;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #2c3e50;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+.price,
+.price-sale {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc !important;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+  width: 100%;
+
+  &:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.image-preview,
+.multi-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.image-preview {
+  img {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+  }
+}
+.preview-img,
+.preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.preview-wrapper {
+  position: relative;
+
+  img {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+  }
+
+  .remove-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+  }
+}
+.btn {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  .success {
+    background-color: #009739;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .back {
+    background-color: #b0c704;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

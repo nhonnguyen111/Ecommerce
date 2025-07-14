@@ -1,0 +1,142 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+}
+
+.modal {
+  background-color: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #2c3e50;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.section {
+  margin-bottom: 20px;
+  color: #333;
+
+  strong {
+    display: inline-block;
+    min-width: 160px;
+    font-weight: 600;
+    color: #555;
+  }
+
+  p {
+    margin-top: 5px;
+    color: #444;
+  }
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.image-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+
+  img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: #ff5f5f;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    background: #e44;
+  }
+}

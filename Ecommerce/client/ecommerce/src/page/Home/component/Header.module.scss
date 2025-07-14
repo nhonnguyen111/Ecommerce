@@ -1,0 +1,111 @@
+.header-wrapper {
+  background: #ffffff; // phải có màu nền để che nội dung scroll bên dưới
+  box-shadow: 0 1px 1px rgba(131, 131, 131, 0.1);
+}
+.nav-bar {
+  background-color: #049645;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 150px;
+  color: #fff;
+  font-size: 13px;
+  .nav-shop {
+    display: flex;
+    gap: 20px;
+  }
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  background-color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(155, 155, 155, 0.1);
+  img {
+    height: 8rem;
+    width: 8rem;
+    object-fit: contain;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  .search-category {
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    border: 1px solid #049645;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: start;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .search-input {
+    height: 40px;
+    width: 400px;
+    font-size: 14px;
+    border: 1px solid #049645;
+    padding-left: 20px;
+    border-radius: 0;
+  }
+
+  .search-btn {
+    height: 40px;
+    font-size: 14px;
+    background-color: #049645;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+  }
+
+  .btn-login {
+    display: flex;
+    font-size: 16px;
+    gap: 20px;
+    color: #049645;
+    font-weight: 600;
+    .btn {
+      color: #049645;
+    }
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-size: cover;
+      }
+      p {
+        color: #049645;
+        font-weight: 500;
+      }
+    }
+  }
+  .cart-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    color: #049645;
+    .cart-title {
+      position: relative;
+    }
+    p {
+      position: absolute;
+      top: -7px;
+      right: -10px;
+      font-size: 10px;
+      background-color: red;
+      padding: 0 5px;
+      border-radius: 50%;
+      color: #fff;
+    }
+  }
+}

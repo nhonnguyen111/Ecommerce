@@ -1,0 +1,209 @@
+.wrapper {
+  padding: 20px;
+
+  .select-product {
+    margin-bottom: 20px;
+
+    label {
+      font-weight: 500;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    select {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      min-width: 220px;
+    }
+  }
+  .review-section {
+    margin-top: 20px;
+
+    .product-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      p {
+        margin: 4px 0;
+        color: #777;
+      }
+    }
+
+    .review-list {
+      .review-item {
+        background: #f9f9f9;
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+
+        .review-header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+          .user {
+            display: flex;
+            gap: 10px;
+            img {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+            }
+            .stars {
+              color: #ffc107;
+            }
+            .view-img {
+              display: flex;
+              gap: 10px;
+              img {
+                height: 100px;
+                width: 120px;
+                border-radius: 5px;
+              }
+            }
+            .reply {
+              color: #0054f0;
+              cursor: pointer;
+            }
+          }
+          .date {
+            font-size: 12px;
+            color: #888;
+          }
+        }
+
+        .comment {
+          margin: 5px 0 0;
+        }
+      }
+    }
+    .modalOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modalContent {
+      position: relative;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 90vw;
+      max-height: 90vh;
+
+      img {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 8px;
+      }
+    }
+    .closeBtn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background: #ff5f5f;
+      border: none;
+      color: white;
+      font-size: 20px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        background: #e44;
+      }
+    }
+    .stars {
+      font-size: 16px;
+      margin-bottom: 4px;
+
+      .star {
+        color: #ccc;
+      }
+
+      .star-filled {
+        color: #f8bc5a;
+      }
+    }
+  }
+}
+.reply-box {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+
+  &.active {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    margin-top: 12px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 60px;
+  }
+
+  .upload-label {
+    display: inline-block;
+    background-color: #eee;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 14px;
+  }
+
+  .reply-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    .submit-btn {
+      background-color: #00bfa5;
+      color: white;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #009688;
+      }
+    }
+  }
+}

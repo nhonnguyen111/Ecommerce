@@ -1,0 +1,79 @@
+.wrapper {
+  padding: 24px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+
+  th,
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  th {
+    background-color: #fafafa;
+    font-weight: 600;
+  }
+
+  .productImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .btn {
+    border: none;
+    background: none;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    &.view {
+      color: #00d50e;
+    }
+    &.edit {
+      color: #3498db;
+    }
+
+    &.delete {
+      color: #e74c3c;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+
+    &.active {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    &.inactive {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+    &.reject {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+  }
+}

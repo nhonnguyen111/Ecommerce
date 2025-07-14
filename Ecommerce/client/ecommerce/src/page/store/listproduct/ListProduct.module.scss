@@ -1,0 +1,136 @@
+.container {
+  padding: 20px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .addBtn {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+      vertical-align: middle;
+    }
+
+    thead {
+      background-color: #f5f5f5;
+    }
+
+    .image {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .productName {
+      font-weight: 500;
+    }
+  }
+}
+tbody {
+  td {
+    text-align: center;
+  }
+}
+.btn-manager {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  .btn-edit {
+    color: #00ea1b;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  .btn-delete {
+    color: red;
+    cursor: pointer;
+    background-color: #fff;
+  }
+}
+.pagination {
+  margin: 20px;
+  text-align: end;
+
+  button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #000;
+    font-weight: 400;
+    &.active {
+      background-color: #1890ff;
+      color: white;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+.descriptionWrapper {
+  position: relative;
+  display: inline-block;
+  .eyeIcon {
+    cursor: pointer;
+  }
+  &:hover .popupDescription {
+    display: block;
+  }
+}
+
+.popupDescription {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  width: 250px;
+  white-space: pre-wrap;
+}
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  padding: 20px 10px;
+  .filter-input,
+  .filter-select {
+    width: 200px;
+  }
+  .btn-search {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,143 @@
+.wrapper {
+  padding: 24px;
+  background: #f9f9f9;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  .tab {
+    padding: 10px 20px;
+    background: #fff;
+    border: 2px solid #28a745;
+    color: #28a745;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #28a745;
+      color: white;
+    }
+
+    &.active {
+      background: #28a745;
+      color: white;
+    }
+  }
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+
+  th {
+    background-color: #e9ecef;
+    padding: 12px;
+    border-bottom: 2px solid #dee2e6;
+    text-align: center;
+    font-size: 14px;
+    color: #495057;
+  }
+
+  td {
+    background-color: white;
+    text-align: center;
+    padding: 14px 8px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 14px;
+    color: #333;
+  }
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-block;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.status-0 {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.status-1 {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.status-2 {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status-3 {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.action-icon-eye,
+.action-icon-check,
+.action-icon-delete {
+  font-size: 18px;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.action-icon-eye {
+  color: #6c757d;
+}
+.action-icon-check {
+  color: #28a745;
+}
+.action-icon-delete {
+  color: #dc3545;
+}
+
+.action-icon-eye:hover,
+.action-icon-check:hover,
+.action-icon-delete:hover {
+  transform: scale(1.1);
+}
+
+.order-detail-table {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  th {
+    background-color: #f1f3f5;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+    color: #333;
+  }
+
+  td {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #eee;
+  }
+
+  img {
+    width: 50px;
+    border-radius: 6px;
+  }
+}
